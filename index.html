@@ -2,7 +2,7 @@
 <html lang="en">
 
 <script>
-    const SupportID = ""; // Fill with your support link or keep it blank to hide Support section 
+    const SupportID = "https://t.me/test"; // Fill with your support link or keep it blank to hide Support section 
 </script>
 
 <head>
@@ -538,7 +538,7 @@
         }
 
         #serverContent {
-            /* max-height: 0px; */
+            max-height: 0px;
             transition: max-height 0.3s ease-out;
             overflow: hidden;
         }
@@ -688,27 +688,13 @@
             </button>
             {% endif %}
         </div>
-        <!-- SERVER SECTION -->
-        <div class="glass-card servers-section">
-            <div class="icon-title" style="cursor: pointer;" onclick="toggleServers()">
-                <div class="stat-icon">
-                    <i class="fas fa-link"></i>
-                </div>
-                <h3>Servers</h3>
-                <i class="fas fa-chevron-down" style="margin-left: auto; transition: transform 0.3s;"></i>
-            </div>
-            <div id="serverContent">
-                <div id="proxyList" class="proxy-list"></div>
-            </div>
-        </div>
-        <!-- APPLICATION CARD SECTION -->
+                <!-- APPLICATION CARD SECTION -->
         <div class="glass-card" id="ApplicationsCard">
             <div class="icon-title" style="cursor: pointer;" onclick="toggleApplications()">
                 <div class="stat-icon" style="margin-bottom: 0;">
                     <i class="fa fa-box-open"></i>
                 </div>
                 <h3>Applications</h3>
-                <i class="fas fa-chevron-down" style="margin-left: auto; transition: transform 0.3s;"></i>
             </div>
             <div id="applicationsContent" style="transition: max-height 0.3s ease-out; overflow: hidden;">
                 <br>
@@ -722,12 +708,12 @@
                 <div class="btn-container">
                     <button onclick="window.open('https://play.google.com/store/apps/details?id=com.v2raytun.android&hl=en')"
                         class="link-btn preferred">
-                        <i class="fa-brands fa-google-play"></i> v2RayTun (PlayStore)
+                        <i class="fa-brands fa-google-play"></i> v2RayTun (ဒေါင်းရန်)
                     </button>
                     <button
                         onclick="window.open('https://play.google.com/store/apps/details?id=app.hiddify.com&hl=en')"
                         class="link-btn">
-                        <i class="fa-brands fa-github"></i> Hiddify (PlayStore)
+                        <i class="fa-brands fa-google-play"></i> Hiddify (‌ဒေါင်းရန်)
                     </button>
                 </div>
                 <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 1.5rem 0;">
@@ -755,11 +741,11 @@
                 <div class="btn-container">
                     <button onclick="window.open('https://apps.apple.com/us/app/v2raytun/id6476628951')"
                         class="link-btn preferred">
-                        <i class="fa-brands fa-app-store-ios"></i> v2RayTun
+                        <i class="fa-brands fa-app-store-ios"></i> v2RayTun (ဒေါင်းရန်)
                     </button>
                     <button onclick="window.open('https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532')"
                         class="link-btn">
-                        <i class="fa-brands fa-app-store-ios"></i> Hiddify
+                        <i class="fa-brands fa-app-store-ios"></i> Hiddify (ဒေါင်းရန်)
                     </button>
                 </div>
                 <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 1.5rem 0;">
@@ -794,6 +780,19 @@
             </div>
         </div>
         </div>
+        <!-- SERVER SECTION -->
+        <div class="glass-card servers-section">
+            <div class="icon-title" style="cursor: pointer;" onclick="toggleServers()">
+                <div class="stat-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Servers</h3>
+            </div>
+            <div id="serverContent">
+                <div id="proxyList" class="proxy-list"></div>
+            </div>
+        </div>
+
     </div>
     <div id="qrModal" class="modal">
         <div class="modal-content">
@@ -808,8 +807,8 @@
             const arrow = document.querySelector('.glass-card:last-child .fa-chevron-down');
             
             if (content.style.maxHeight !== '0px') {
-                content.style.maxHeight = 'fit-content';
-                arrow.style.transform = 'rotate(180deg)';
+                content.style.maxHeight = 0;
+                arrow.style.transform = 'rotate(0deg)';
             } else {
                 content.style.maxHeight = 'fit-content';
                 arrow.style.transform = 'rotate(180deg)';
