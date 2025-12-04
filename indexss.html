@@ -1019,20 +1019,20 @@
             // displayProxies();
             processOutlineLinks();
 
-            if (!SupportID) {
-                const supportButton = document.getElementById('supportButton');
-                {% if user.status in ['active', 'on_hold'] %}
-                const hr = supportButton.previousElementSibling;
-                {% else %}
-                const hr = supportButton.nextElementSibling;
-                {% endif %}
-                if (supportButton) supportButton.style.display = 'none';
-                if (hr && hr.tagName === 'HR') hr.style.display = 'none';
-            } else {
-                document.getElementById('supportButton').addEventListener('click', function() {
-                    window.open(SupportID);
-                });
-            }
+            // if (!SupportID) {
+            //     const supportButton = document.getElementById('supportButton');
+            //     {% if user.status in ['active', 'on_hold'] %}
+            //     const hr = supportButton.previousElementSibling;
+            //     {% else %}
+            //     const hr = supportButton.nextElementSibling;
+            //     {% endif %}
+            //     if (supportButton) supportButton.style.display = 'none';
+            //     if (hr && hr.tagName === 'HR') hr.style.display = 'none';
+            // } else {
+            //     document.getElementById('supportButton').addEventListener('click', function() {
+            //         window.open(SupportID);
+            //     });
+            // }
 
             document.querySelectorAll('.copy-btn').forEach(button => {
                 button.addEventListener('click', function () {
