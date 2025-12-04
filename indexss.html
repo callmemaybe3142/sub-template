@@ -2,7 +2,7 @@
 <html lang="en">
 
 <script>
-    const SupportID = "https://t.me/techinfo_support_bot"; // Fill with your support link or keep it blank to hide Support section 
+    const SupportID = ""; // Fill with your support link or keep it blank to hide Support section 
 </script>
 
 <head>
@@ -558,9 +558,9 @@
                     💖 မင်္ဂလာပါ 💖
                 </h2>
                 <div class="user-info">
-                    <div>
+                    <!-- <div>
                         <h2 class="username-text" style="user-select: text;">{{ user.username }}</h2>
-                    </div>
+                    </div> -->
                     <div>
                         {% if user.status == 'active' %}
                         <span class="status"
@@ -589,12 +589,12 @@
                     </div>
                 </div>
             </div>
-            {% if user.status in ['expired', 'limited', 'disabled'] %}
+            <!-- {% if user.status in ['expired', 'limited', 'disabled'] %}
             <button class="link-btn" id="supportButton" style="background: var(--gradient4);">
                 <i class="fas fa-external-link-alt"></i> Contact support
             </button>
             <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
-            {% endif %}
+            {% endif %} -->
             <div class="stats-grid">
                 <div class="stat-card data-usage-card" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div style="display: flex; align-items: center; gap: 0.75rem; width: 100%; justify-content: flex-start;">
@@ -671,7 +671,7 @@
                 </div>
             </div>
             <br>
-            <h3>Subscription link</h3>
+            <!-- <h3>Subscription link</h3>
             <div class="subscription-container">
                 <div class="subscription-url" style="text-align: center;">{{ user.subscription_url }}</div>
                 <button class="copy-btn" onclick="navigator.clipboard.writeText('{{ user.subscription_url }}')">
@@ -680,13 +680,13 @@
                 <button class="qr-btn" onclick="showQRCode('{{ user.subscription_url }}')">
                     <i class="fas fa-qrcode"></i> QR
                 </button>
-            </div>
-            {% if user.status in ['active', 'on_hold'] %}
+            </div> -->
+            <!-- {% if user.status in ['active', 'on_hold'] %}
             <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 1.5rem 0;">
             <button class="link-btn" id="supportButton" style="background: var(--gradient3);">
                 <i class="fas fa-external-link-alt"></i> Contact support
             </button>
-            {% endif %}
+            {% endif %} -->
         </div>
                 <!-- APPLICATION CARD SECTION -->
         <div class="glass-card" id="ApplicationsCard">
